@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'/>
+    <meta name="viewport" content="width=device-width">
+    <title>Dear Diary</title>
+    <link rel='stylesheet' href='reset.css' media='all'/>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Over+the+Rainbow|Lobster|Bangers|Julee' media='all and (min-width: 960px)' />
+    <link rel='stylesheet' href='960.css' type='text/css' media='all and (min-width: 960px)'/>
+    <link rel='stylesheet' href='diary.css' type='text/css' media='all'/>
+    <script>"JSON" in window || document.write('<script src="json2.js"><\/script>')</script>
+  </head>
+  <body> 
+    <div id='page'>
+      <button onclick = "gfg_Run()">
+        Set Background
+      </button>
+      <br>
+      <br>
+      <header>
+        <h1>Dear Diary</h1>
+        <h2>Capturing moments!!!</h2>
+      </header>
+
+      <div id='content' class='container_12'>
+        <div class='grid_12' id='add-text'>
+         
+          <div class='label'>Subject</div>
+          <div class='field'><input type='text' name='subject'/></div>
+          <div class='label'>Body</div>
+          <div class='field'><textarea></textarea></div>
+          <div class='actions'>
+            <button><a href="file:///C:/Users/santhana/Downloads/e-DMS%20Project%20Using%20PHP%20and%20MySQL/e-DMS%20Project%20Using%20PHP%20and%20MySQL/edms/hackathon/index.html">Record</a></button>
+            <button onclick='diary.okEdit()'>Ok!</button>
+            <button onclick='diary.cancelEdit()'>Cancel!</button>
+           
+          </div>
+        </div>
+        </div>
+        <div class='clear'></div>
+        <div class='grid_3'>
+          <nav>
+            <ul>
+              <li><a href='#' onclick='diary.addTxt()'>Personal Journal</a></li>
+             <br>
+              <li><a href='#' onclick='diary.addTxt()'>Important Notes</a></li>
+            
+              <br>
+              <li><a href='#' onclick='diary.addTxt()'>General</a></li>
+          
+            </ul>
+          </nav>
+          <div class='documentation'>
+            Welcome to the  world of<b> Dear Diary application! </b>We hope you really enjoy it!<br/><br/>
+            Simply click "<b>Available Options </b>" above and you'll be on your way to writing the most awesome
+            diary of your entire life!
+          </div>
+        </div>
+        <div class='grid_9' id='posts'>
+          XXX
+        </div>
+        <div class='clear'></div>
+      </div>
+      <footer>
+        © 2022 Dear Diary! All Rights Reserved.
+      </footer>
+    </div>
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script src='diary.js'></script>
+  <script>
+    var el_up = document.getElementById("GFG_UP");
+    var el_down = document.getElementById("GFG_DOWN");
+    var str = "Click on button to change the background color";
+  
+    el_up.innerHTML = str;
+  
+    function changeColor(color) {
+      document.body.style.background = color;
+    }
+    function generateRandomInteger(max) {
+    return Math.floor(Math.random() * max) + 1;
+}
+    function gfg_Run() {
+      let value4 = generateRandomInteger(15);
+      var colors = ["red", "blue", "green","yellow","pink","violet","brown","white","gold","grey","skyblue","orange","dark green","navy blue","lavender"];
+      changeColor(colors[value4]);
+      el_down.innerHTML = "Background Color changed";
+    }		
+   
+  </script>
+  
+  </body>
+
+</html>
